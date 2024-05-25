@@ -1,0 +1,15 @@
+<h1 class="text center my-5">JS puzzle 🧩</h1>
+<table>
+  <% @size.times do %>
+    <tr>
+      <% @size.times do %>
+        <% if @new_game[0] == ""  %>
+          <td class="empty"><%= @new_game[0] %></td>
+        <% else %>
+          <td><%= @new_game[0] %></td>
+        <% end %>
+        <% @new_game.shift %>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
